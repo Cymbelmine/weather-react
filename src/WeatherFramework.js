@@ -3,7 +3,7 @@ import Weather from "./Weather";
 import "./App.css";
 import "./WeatherFramework.css"
 
-export default function Weather() {
+export default function WeatherFramework() {
   let weatherData = {
     City: "Berlin",
     Date: "Thursday 20:05",
