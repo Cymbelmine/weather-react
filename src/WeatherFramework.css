@@ -42,11 +42,11 @@
 .Weather .Form-Control {
   width: 50%;
   position: relative;
-  left: 14em;
+  left: 20em;
 }
 .Weather .btn {
   position: relative;
-  left: 23.4em;
+  left: 36em;
   margin-top: 6px;
   color: #16c79a;
   background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
