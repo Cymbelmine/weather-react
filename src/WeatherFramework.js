@@ -85,7 +85,7 @@ export default function WeatherFramework() {
         <div className="row weather-forecast"></div>
       </div>
       <small>
-        <a href="https://github.com/Cymbelmine/Project-weather-app/">
+        <a href="https://github.com/Cymbelmine/weather-react">
           Open-source code
         </a>{" "}
         by Mel Wieschalla
