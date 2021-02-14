@@ -1,0 +1,65 @@
+.Weather {
+  max-width: 600px;
+  margin: 30px auto;
+}
+.Weather .Weather-App {
+  padding: 18px;
+  border: 1px solid lightgrey;
+  border-radius: 8px;
+  background-image: linear-gradient(to right, #92fe9d 0%, #00c9ff 100%);
+}
+.Weather .Overview {
+  margin-bottom: 7px;
+  padding-top: 0;
+}
+.Weather .img {
+  margin-right: 6px;
+  height: 64px;
+  width: 64px;
+}
+.Weather .Temperature {
+  font-size: 64px;
+  font-weight: 400;
+  text-decoration: none solid rgb(32, 33, 36);
+  color: #202124;
+  line-height: 1;
+  height: auto;
+  width: auto;
+}
+.Weather .Weather-Temperature .Units {
+  position: relative;
+  font-size: 16px;
+  top: -34px;
+}
+.Weather .Weather-Temperature .Active {
+  color: rgb(32, 33, 36);
+  cursor: default;
+}
+.Weather .Weather-Temperature .Active:hover {
+  text-decoration: none;
+}
+
+.Weather .Form-Control {
+  width: 50%;
+  position: relative;
+  left: 14em;
+}
+.Weather .btn {
+  position: relative;
+  left: 23.4em;
+  margin-top: 6px;
+  color: #16c79a;
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+}
+.Weather .Descriptors {
+  font-size: 20px;
+  padding: 4px;
+}
+.Weather .Descriptors2 {
+  font-size: 20px;
+  padding: 4px;
+}
+.Weather .Descriptors3 {
+  font-size: 18px;
+  padding: 4px;
+}
