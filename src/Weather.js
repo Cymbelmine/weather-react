@@ -1,9 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import axios from 'axios';
 import "./Weather.css";
 
 
 export default function Weather() {
+  
+const [weatherData, setWeatherData] = useState({ ready: false });
+
+function handleResponse(response){
+  console.log(response.data.main);
+  setWeatherData ({
+    ready: true,
+    city: response.data.name,
+    date: "Wednesday 7:00",
+    temperature: response.data.main.temp,
+      description: response.data.weather[0].description,
+      humidity: response.data.main.humidity,
+      wind: response.data.wind.speed,
+      icon: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  })
+}
+if (weatherData.ready){
 return(<div className="Weather">
   <form>
     <div className="row">
@@ -19,22 +36,22 @@ return(<div className="Weather">
     </div>
     </div>
   </form>
-  <h1>Lisbon</h1>
+  <h1>{weatherData.city}</h1>
   <ul>
     <li>
-      Wednesday 7:00
+      {weatherData.date}
     </li>
-    <li>
-     Sunny
+    <li className="text-capitalize">
+     {weatherData.description}
     </li>
   </ul>
   <div className="row mt-3">
     <div className="col-6">
       <div className="clearfix">
-      <img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" alt="Sunny" 
+      <img src={weatherData.icon} alt={weatherData.description} 
       className="float-left"/>
       <div className="float-left">
-    <span className="temperature">20</span>
+    <span className="temperature">{Math.round(weatherData.temperature)}</span>
     <span className="unit">ºC</span>
     </div>
     </div>
@@ -42,16 +59,22 @@ return(<div className="Weather">
     <div className="col-6">
       <ul>
         <li>
-          Precipitation: 15%
+          Humidity: {weatherData.humidity}%
         </li>
         <li>
-          Humidity: 20%
-        </li>
-        <li>
-          Wind: 13km/h
+          Wind: {weatherData.wind}km/h
         </li>
       </ul>
     </div>
   </div>
 </div>)
+} else {
+  const apiKey = `162a820f7b475c266249f47d9d4b281d`;
+  let units = `metric`;
+  let city = `Lisbon`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=${units}&appid=${apiKey}`;
+  axios.get(apiUrl).then(handleResponse);
+
+  return "Loadiing...";
+}
 }
