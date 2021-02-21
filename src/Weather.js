@@ -10,7 +10,8 @@ return(<div className="Weather">
       <div className="col-9">
     <input type="search" 
     placeholder="Type a city..."
-    className="form-control"/>
+    className="form-control"
+    autoFocus="on"/>
     </div>
     <div className="col-3">
     <input type="submit" value="Search"
@@ -27,10 +28,16 @@ return(<div className="Weather">
      Sunny
     </li>
   </ul>
-  <div className="row">
+  <div className="row mt-3">
     <div className="col-6">
-      <img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" alt="Sunny" />
-    20ºC
+      <div className="clearfix">
+      <img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" alt="Sunny" 
+      className="float-left"/>
+      <div className="float-left">
+    <span className="temperature">20</span>
+    <span className="unit">ºC</span>
+    </div>
+    </div>
     </div>
     <div className="col-6">
       <ul>
