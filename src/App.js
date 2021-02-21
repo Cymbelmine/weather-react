@@ -7,7 +7,6 @@ export default function App() {
   return (
     <div className="App">
       <div className="container">
-        <h1>Weather App</h1>
         <Weather />
        <footer>
          This project was created by <a href="https://stepbystep.hashnode.dev/" target="_blank">Mel Wieschalla</a> and is 
