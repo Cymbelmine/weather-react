@@ -8,7 +8,7 @@
 }
 
 .Weather h1 {
-  font-size: 50px;
+  font-size: 54px;
   font-weight: 100;
   color: #19456b;
   line-height: 55px;
@@ -47,16 +47,6 @@
   line-height: 1;
 }
 
-.Weather .Weather-App {
-  padding: 18px;
-  border: 1px solid lightgrey;
-  border-radius: 8px;
-  background-image: linear-gradient(to right, #92fe9d 0%, #00c9ff 100%);
-}
-.Weather .Overview {
-  margin-bottom: 7px;
-  padding-top: 0;
-}
 .Weather .img {
   margin-right: 6px;
   height: 64px;
@@ -83,13 +73,16 @@
 .Weather .Weather-Temperature .Active:hover {
   text-decoration: none;
 }
-
-.Weather .Form-Control {
-  width: 80%;
-  position: relative;
-  left: 24em;
-}
 .Weather .btn {
   color: #16c79a;
   background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+}
+#descriptors {
+  position: relative;
+  left: 24em;
+  bottom: 4em;
+}
+#descriptors2 {
+  position: relative;
+  margin-top: 1em;
 }
